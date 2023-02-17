@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/authenticate.css">  
+    <title>Signup</title>
+</head>
+<body>
+    <div class='main'>
+
+      <div class="signupBox">
+      <% if(error) {%>
+          <h1 id='msg'><%= error %></h1>
+        <% } %>
+        <h1 class ="head">Sign Up</h1>
+        <form method="post" action="/signup" enctype="multipart/form-data" ></p>
+        <p>Username: <input required name="username" type="text" placeholder="enter name"/></p>
+        <p>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <input required name="email" type="email" placeholder="enter email"/></p>
+        <p>Password: <input required name="password" type="password" placeholder="enter password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"/></p>
+        <p>Add profile picture: <input required name="profile_pic" type="file"/></p>
+        <p><input type="submit" value="create account"/></p>
+        </form>
+        <p>Already a user? <button><a id ='signuplogin' href='/login'>Login</a></p>
+      </div>
+    </div>
+</body>
+<script>
+
+setTimeout(function(){
+var message = document.getElementById('msg')
+message.style.display ='none'
+}, 3000)
+
+</script>
+</html>

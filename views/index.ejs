@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce</title>
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <%- include('partials/navbar',{user:user}) %>
+    <h1 class="head">Products</h1>
+    <div class="main-container">
+      <div class="cardsContainer">
+        <% products.forEach(function(product){ %>
+        <div class="column">
+          <div class="cards">
+            <img class="product_img" src="<%= product.image %>" />
+            <h4><%= product.product_name %></h4>
+            <h4><%= product.price %></h4>
+            <h4 style="display: none"><%= product.product_description %></h4>
+            <button>View Description</button>
+            <p><button id="<%= product.product_id %>">Add to cart</button></p>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+
+      <button id="loadMoreBtn">Load More</button>
+    </div>
+  </body>
+  <script src="scripts/index.js"></script>
+</html>

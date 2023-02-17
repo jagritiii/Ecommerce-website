@@ -1,0 +1,65 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+  .product_img{
+    height:150px;
+  }
+  
+  
+  
+  .user-details{
+    display: flex;
+    width: 25vw;
+    justify-content: space-evenly;
+    align-items: left;
+  }
+  
+  .cards{
+    height:300px;
+    margin-top :40px;
+    margin-bottom :40px;
+    margin-left: 100px;
+    margin-right: 100px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+  }
+  
+  /* Float four columns side by side */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .cardsContainer {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .cardsContainer:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  .head{
+    text-align: center;
+  }

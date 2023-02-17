@@ -1,0 +1,106 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    
+  }
+  
+  .main{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: url("../media/download.jpg") center no-repeat;
+    background-size: 100vw 100vh;
+  
+  }
+  
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  input[type=email],input[type=text],input[type=password] {
+    /* margin:10px; */
+    width: 250px;
+    height: 30px;
+  }
+  
+  input[type=submit]{
+    /* background-color: #12e7cb; */
+    border: none;
+    background-color: rgb(112, 181, 228);
+    padding: 10px 22px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  button{
+    border: none;
+    color: black;
+    background-color: rgb(112, 181, 228);
+    padding:3px 18px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 15px;
+    /* height: 3rem; */
+  }
+  
+  input[type=submit]:hover, button:hover {
+   background-color: white;
+  
+  }
+  
+  p{
+    color:white;
+    font-size: 20px;
+    margin:10px
+  }
+  
+  .loginBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: 18vw;
+  top: 15vh;
+  width: 34vw;
+  height: 45vh;
+  margin-top: 30px;
+  
+  }
+  
+  .signupBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: 18vw;
+  top: 15vh;
+  width: 40vw;
+  height: 60vh;
+  margin-top: 30px;
+  }
+  
+  #msg{
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  height: 8vh;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 4px 10px;
+  }
+  
+  .head{
+    margin-bottom: 2rem;
+    color: rgb(112, 181, 228);
+  
+  }

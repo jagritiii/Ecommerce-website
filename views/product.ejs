@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+  </head>
+  <body>
+    <%- include('partials/adminNavbar') %> <% var count = products.length; %>
+    <h2 class="page-title">Products</h2>
+    <br />
+    <a href="/admin/product/add-product" class="btn btn-primary"
+      >Add a new product</a
+    >
+    <br /><br />
+
+    <% if (products.length > 0) { %>
+
+    <table class="table table-striped">
+      <thead>
+        <tr class="home">
+          <th>Product</th>
+          <th>Price</th>
+          <th>Category</th>
+          <th>Product Image</th>
+          <th>Product Stock</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% products.forEach(function(product) { %>
+        <tr>
+          <td><%= product.product_name %></td>
+          <td>Rs<%= parseFloat(product.price).toFixed(2) %></td>
+          <td><%= product.product_category %></td>
+          <td>
+            <% if (product.image == "") { %>
+            <img src="/images/noimage.png" />
+            <% } else { %>
+            <img src="<%= product.image %>" height="100px" />
+            <% }%>
+          </td>
+          <td><%= product.stock %></td>
+          <td>
+            <a href="/admin/product/edit-product/<%= product.product_id %>"
+              >Edit</a
+            >
+          </td>
+          <td class="dltBtn">
+            <a href="/admin/product/delete-product/<%= product.product_id %>"
+              >Delete</a
+            >
+          </td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    <% } else { %>
+    <h3 class="text-center">There are no products.</h3>
+    > <% } %>
+  </body>
+</html>

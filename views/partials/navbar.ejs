@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="styles/navbar.css" />
+
+<div class="navbar">
+  <% if(user){ %>
+  <div class="user-details">
+    <img src="<%=user.pic%>" height="40px" alt="user" />
+    <h2><%= user.name%></h2>
+  </div>
+  <h3>Homepage</h3>
+  <button id="goToCart"><a href="/cart">My Cart</a></button>
+  <button id="settings"><a href="/settings">account settings</a></button>
+  <button id="logout"><a href="/logout">LogOut</a></button>
+
+  <% }else{ %>
+  <h3>Homepage</h3>
+  <button id="login"><a href="/login">Login</a></button>
+
+  <% } %>
+</div>

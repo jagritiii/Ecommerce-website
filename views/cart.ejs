@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="styles/cart.css">
+
+<h2><a href ='/'>go back </a></h2>
+<h1>Cart items</h1>
+<div class='main-container'>
+
+  <div class='cardsContainer'>
+  <%if (products.length<1){ %>
+  <img class='empty_cart' src=<%= 'media/empty_cart.png' %> />
+
+<% }else{products.forEach( (product)=>{ %>
+  <div class='cards'>
+    <img class ='product_img' src ="<%= product.image %>" />
+    <h4> <%= product.product_name %> </h4>
+    <h4> <%= product.price %> </h4>
+    <h4 style = "display:none;"> <%= product.product_description %></h4>
+    <div class='quantity'>
+      <button class='incQuantity'>+</button>
+      <span ><%= product.quantity %></span>
+      <button class='decQuantity'>-</button><span>
+    </div>
+   <p> <button class='removeItem' id=<%= product.product_id%>>delete</button><button class= 'descriptionBtn'>View Description</button></p>
+  </div>
+
+<% }) %>  
+<button id='loadMoreBtn'>Buy Now</button>
+<% } %>
+  </div>
+
+
+<script src='scripts/cart.js'></script>
+</div>

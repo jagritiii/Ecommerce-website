@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/authenticate.css" />
+    <title>Admin login</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="loginBox">
+        <div id="msg"><%= msg %></div>
+        <h1 class="head">Admin Login</h1>
+        <form action="/admin/login" method="post">
+          <p>
+            Username:
+            <input type="email" placeholder="enter email" name="email" />
+          </p>
+          <p>
+            Password:
+            <input
+              type="password"
+              placeholder="enter password"
+              name="password"
+            />
+          </p>
+          <p><input type="submit" value="login" /></p>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script>
+    setTimeout(function () {
+      var message = document.getElementById("msg");
+      message.style.display = "none";
+    }, 3000);
+  </script>
+</html>
